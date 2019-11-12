@@ -2,7 +2,7 @@
 Note - this is unmodified copy of https://github.com/go-yaml/yaml, branch v2, as of commit https://github.com/go-yaml/yaml/commit/770b8dae4cf00919e5eafffbd8d58186294b61b5 Date:   Tue Nov 5 08:55:36 2019 -0800. The original LICENSE applies.
 
 # Problem
-The repo is copied to due the current failures when trying to mirror 
+The repo is copied to due the current failures when trying to mirror
 https://github.com/go-yaml/yaml in a different server such as git.xyzcompany.com, and using the following `replace` in `go.mod`:
 ```
 replace gopkg.in/yaml.v2 => git.xyzcompany.com/mirror-github/go-yaml--yaml v2.2.2+incompatible
@@ -27,6 +27,7 @@ go: errors parsing go.mod:
 
 # Solution
 The following works - no error from `go mod download` and other `go` commands:
+
 `replace gopkg.in/yaml.v2 => github.com/dmitris/go-yaml-v2 v0.2.5`
 
 
